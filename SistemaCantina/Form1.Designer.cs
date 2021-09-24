@@ -34,12 +34,12 @@ namespace SistemaCantina
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.fotinha = new System.Windows.Forms.PictureBox();
+            this.picBox = new System.Windows.Forms.PictureBox();
             this.lstCaixa = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.fotinha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCodigo
@@ -84,15 +84,15 @@ namespace SistemaCantina
             this.label3.TabIndex = 3;
             this.label3.Text = "VALOR TOTAL:";
             // 
-            // fotinha
+            // picBox
             // 
-            this.fotinha.ImageLocation = "";
-            this.fotinha.Location = new System.Drawing.Point(43, 116);
-            this.fotinha.Name = "fotinha";
-            this.fotinha.Size = new System.Drawing.Size(237, 229);
-            this.fotinha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fotinha.TabIndex = 4;
-            this.fotinha.TabStop = false;
+            this.picBox.ImageLocation = "";
+            this.picBox.Location = new System.Drawing.Point(43, 116);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(237, 229);
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox.TabIndex = 4;
+            this.picBox.TabStop = false;
             // 
             // lstCaixa
             // 
@@ -156,7 +156,7 @@ namespace SistemaCantina
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lstCaixa);
-            this.Controls.Add(this.fotinha);
+            this.Controls.Add(this.picBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -167,7 +167,7 @@ namespace SistemaCantina
             this.Name = "Form1";
             this.Text = "cantina";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.fotinha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,7 +179,7 @@ namespace SistemaCantina
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox fotinha;
+        private System.Windows.Forms.PictureBox picBox;
         private System.Windows.Forms.ListBox lstCaixa;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnLimpar;

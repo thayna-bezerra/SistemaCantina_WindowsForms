@@ -12,9 +12,9 @@ namespace SistemaCantina
 {
     public partial class Form1 : Form
     {
-        string[] produtos = new string[10];
-        string[] codigo = new string[10];
-        double[] valor = new double[10];
+        string[] produtos = new string[6];
+        string[] codigo = new string[6];
+        double[] valor = new double[6];
         double soma;
         // arrays para armazenar 6 produtos -- códigos e valores
 
@@ -31,7 +31,7 @@ namespace SistemaCantina
                 int indice = 0;
                 for (int prod = 1; prod < codigo.Length; prod++) // enquanto o prod for menor ou igual a qtde de itens do array 
                 {
-                    if(txtCodigo.Text == codigo[prod])
+                    if(txtCodigo.Text == codigo[prod]) //definindo a posição do array
                     {
                         indice = prod;
                     }
@@ -41,14 +41,16 @@ namespace SistemaCantina
                 {
                     MessageBox.Show("Produto não encontrado", "Tente Novamente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     // se foi encontrado o produto ele retorna as informações de acordo com a posição na array
+                    // se não, aparece a caixa de mensagem informando que o produto não foi encontrado
                 }
+
                 else
                 {
                     lstCaixa.Items.Add(txtCodigo.Text + " -- " + produtos[indice] + "-- R$ " + valor[indice]); //add na listbox
                     soma = soma + valor[indice];
                     label1.Text = ("R$ " + soma);
 
-                    fotinha.ImageLocation = "c:/imagens/" + codigo[indice] + ".jpg";//localização da imagem
+                    picBox.ImageLocation = "c:/imagens/" + codigo[indice] + ".jpg"; //localização da imagem (pasta imagens no computador // cada foto fica com o código definido como o nome)
                     txtCodigo.Text = "";//o textbox será limpo
                     txtCodigo.Focus();//Focus posiciona o cursor para o TextBox para uma nova digitação
                 }
@@ -57,8 +59,8 @@ namespace SistemaCantina
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            carregarArray();
-            soma = 0;
+            carregarArray(); //chama a função com os arrays definidos
+            soma = 0; //zera a variável q soma todos os produtos da lista
         }
 
         private void carregarArray()
@@ -82,22 +84,20 @@ namespace SistemaCantina
             valor[5] = 8.00;
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Close();
+            Close(); //fecha form
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            lstCaixa.Items.Clear(); 
-            fotinha.ImageLocation = "";
-            //limpar a lista
-            //limpar foto
+            lstCaixa.Items.Clear(); //limpa informações da lista
+            picBox.ImageLocation = ""; //limpa imagem da picture box
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
